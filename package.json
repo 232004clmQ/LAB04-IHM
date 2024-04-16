@@ -1,0 +1,19 @@
+{
+  "name": "lab04-ihm",
+  "version": "1.0.0",
+  "description": "This is a react project",
+  "main": "/src/index.js",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Camila",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-script": "^2.0.5"
+  }
+}
