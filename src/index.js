@@ -2,14 +2,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react'
 import './style.css'
-/*import React, { StrictMode } from "react";*/
 import { createRoot } from "react-dom/client";
 
-/*import Header from "./header";*/
 import Main from "./main";
 import Aside from "./aside";
-/*import Footer from "./footer";*/
 
+import Single from './single';
+import Basic from "./layout/basic";
 
 import {
     createBrowserRouter,
@@ -22,9 +21,6 @@ setTimeout ( () => {
     feather.replace();
 }, 1000);
 
-import Single from './single';
-import Basic from "./layout/basic";
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,16 +29,16 @@ const router = createBrowserRouter([
             {
                 path: '',
                 element: <>
-                    <div className="col-md-8">
+                    <div className="col-md-8 py-4">
                         <Main></Main>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 py-4">
                         <Aside></Aside>
                     </div>
                 </>
             },
             {
-                path: "detalle",
+                path: "detalle/:slug",
                 element: <Single />,
             },
         ],
@@ -54,24 +50,3 @@ const root = createRoot(document.getElementById("root"));
 root.render(
     <RouterProvider router={router} />
 );
-
-/*
-const root = createRoot(document.getElementById("root"));
-root.render(
-    <StrictMode>
-        <Header>
-        </Header>
-        <div className="container">
-            <div className="row">
-                <div className= "col-md-8">
-                <Main></Main>
-                </div>
-                <div className= "col-md-4">
-                <Aside></Aside>
-                </div>
-            </div>
-        </div>
-        <Footer></Footer>
-    </StrictMode>
-);
-*/
