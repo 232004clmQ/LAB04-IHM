@@ -1,5 +1,5 @@
 const Aside = () => {
-    return <div className="border-white">
+    return <div className="border-black">
     <h1 className="text-center">Registro</h1>
     <p className="text-center mb-4"><strong>¡Bienvenid@ a TaxiExpress!</strong></p>
     <p className="text-justify">Únete a nosotros hoy mismo para acceder a beneficios exclusivos</p>

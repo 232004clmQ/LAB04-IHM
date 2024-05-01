@@ -1,0 +1,14 @@
+
+        body {
+            background-color: #fff; 
+            color: #000; 
+        }
+        .bg-orange {
+            background-color: #FFA500;
+        }
+        /* estilo borde con líneas negras */
+        .border-black {
+            border: 2px solid #000; 
+            padding: 10px;
+            border-radius: 10px;
+        }

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Taxi 1",
+        "slug": "taxi-1",
+        "description": "Descripcion del taxi 1",
+        "picture": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2019/06/26/000596154W.jpg"
+    },
+    {
+        "name": "Taxi 2",
+        "slug": "taxi-2",
+        "description": "Descripcion del taxi 2",
+        "picture": "https://www.peruhop.com/wp-content/uploads/taxis-en-peru_web.jpg"
+    },
+    {
+        "name": "Taxi 3",
+        "slug": "taxi-3",
+        "description": "Descripcion del taxi 3",
+        "picture": "https://cdn.www.gob.pe/uploads/document/file/4048049/taxi%20modelo%20web.jpeg.jpeg"
+    }
+]

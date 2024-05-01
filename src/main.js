@@ -1,21 +1,35 @@
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
+import Taxis from './data/taxis.json'
+import { useNavigate } from 'react-router-dom';
+
 const Main = () => {
+    const navigate = useNavigate();
+
+    const handleClick = (slug) => {
+        navigate("/detalle/" + slug);
+    }
+
     return (
         <Container>
             <Row>
                 <Col md={8}>
                     <h1 className="text-center">TaxiExpress</h1>
 
-                    <Carousel id="carouselExample">
-                        <Carousel.Item>
-                            <img src="https://portal.andina.pe/EDPfotografia3/Thumbnail/2019/06/26/000596154W.jpg" className="d-block w-100" alt="" />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src="https://www.peruhop.com/wp-content/uploads/taxis-en-peru_web.jpg" className="d-block w-100" alt="" />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src="https://cdn.www.gob.pe/uploads/document/file/4048049/taxi%20modelo%20web.jpeg.jpeg" className="d-block w-100" alt="" />
-                        </Carousel.Item>
+                    <Carousel>
+                        {
+                                Taxis.map(it => {
+                                return (<Carousel.Item onClick={(e) => {
+                                    e.preventDefault(); handleClick(it.slug)
+                                }}>
+                                    <img className="d-block w-100" src={it.picture}></img>
+                                    <Carousel.Caption>
+                                        <h3>{it.name}</h3>
+                                        <p>{it.description}</p>
+                                    </Carousel.Caption>
+
+                                </Carousel.Item>);
+                            })
+                        }
                     </Carousel>
 
                     <div className="py-4">
