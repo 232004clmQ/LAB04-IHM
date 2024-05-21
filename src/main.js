@@ -1,5 +1,5 @@
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
-import Taxis from './data/taxis.json'
+import Taxis from './data/taxis.json';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
@@ -11,25 +11,22 @@ const Main = () => {
 
     return (
         <Container>
-            <Row>
+            <Row className="justify-content-center">
                 <Col md={8}>
                     <h1 className="text-center">TaxiExpress</h1>
 
                     <Carousel>
-                        {
-                                Taxis.map(it => {
-                                return (<Carousel.Item onClick={(e) => {
-                                    e.preventDefault(); handleClick(it.slug)
-                                }}>
-                                    <img className="d-block w-100" src={it.picture}></img>
-                                    <Carousel.Caption>
-                                        <h3>{it.name}</h3>
-                                        <p>{it.description}</p>
-                                    </Carousel.Caption>
-
-                                </Carousel.Item>);
-                            })
-                        }
+                        {Taxis.map((it, index) => (
+                            <Carousel.Item key={index} onClick={(e) => {
+                                e.preventDefault(); handleClick(it.slug)
+                            }}>
+                                <img className="d-block w-100" src={it.picture} alt={it.name} />
+                                <Carousel.Caption>
+                                    <h3>{it.name}</h3>
+                                    <p>{it.description}</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
                     </Carousel>
 
                     <div className="py-4">

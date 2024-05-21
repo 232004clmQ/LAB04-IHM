@@ -9,7 +9,7 @@ const Basic = () => {
             <StrictMode>
                 <Header></Header>
                 <div className="">
-                    <div className="row">
+                    <div className="row row-main">
                         <Outlet></Outlet>
                     </div>
                 </div>

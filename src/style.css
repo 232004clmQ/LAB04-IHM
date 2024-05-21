@@ -1,14 +1,29 @@
 
-        body {
-            background-color: #fff; 
-            color: #000; 
-        }
-        .bg-orange {
-            background-color: #FFA500;
-        }
-        /* estilo borde con líneas negras */
-        .border-black {
-            border: 2px solid #000; 
-            padding: 10px;
-            border-radius: 10px;
-        }
+body {
+    background-color: #fff; 
+    color: #000; 
+}
+.bg-yellow {
+    background-color: #FEC52F; /* se asocia comúnmente con la energía, la claridad y la atención */
+}
+/* estilo borde con líneas negras */
+.border-black {
+    border: 2px solid #000; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.yellow-btn {
+    background-color: #FEC52F; 
+    border-color: #FEC52F; 
+    color: #fff; 
+}
+
+.yellow-btn:hover {
+    background-color: #F8CD18; 
+    border-color: #F8CD18; 
+}
+
+.row-main {
+    margin: 10px;
+}
